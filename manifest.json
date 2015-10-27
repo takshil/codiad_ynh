@@ -1,0 +1,35 @@
+{
+    "name": "Codiad",
+    "id": "codiad",
+    "description": {
+        "en": "Codiad is a web-based IDE framework",
+        "fr": "Codiad is a web-based IDE framework"
+    },
+    "url": "http://codiad.com/",
+    "maintainer": {
+        "name": "",
+        "email": ""
+    },
+    "multi_instance": "false",
+    "arguments": {
+        "install" : [
+            {
+                "name": "domain",
+                "ask": {
+                    "en": "Choose a domain for Codiad",
+                    "fr": "Choisissez un domaine pour Codiad"
+                },
+                "example": "domain.org"
+            },
+            {
+                "name": "path",
+                "ask": {
+                    "en": "Choose a path for Codiad",
+                    "fr": "Choisissez un chemin pour Codiad"
+                },
+                "example": "/codiad",
+                "default": "/codiad"
+            }
+        ]
+    }
+}

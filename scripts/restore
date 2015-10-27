@@ -1,0 +1,29 @@
+#!/bin/bash
+
+set -e
+app=codiad
+
+# The parameter $1 is the uncompressed restore directory location
+backup_dir=$1/apps/$app
+
+# Restore sources & data
+sudo cp -a $backup_dir/sources/. /var/www/$app
+
+# Restore permissions
+sudo chown -R root:root $final_path
+sudo chown www-data:www-data $final_path/config.php
+sudo chown -R www-data:www-data $final_path/data
+sudo chown -R www-data:www-data $final_path/workspace
+sudo chown -R www-data:www-data $final_path/plugins
+sudo chown -R www-data:www-data $final_path/themes
+
+# Restore Nginx and YunoHost parameters
+sudo cp -a $backup_dir/yunohost/. /etc/yunohost/apps/$app
+domain=$(sudo yunohost app setting $app domain)
+sudo cp -a $backup_dir/nginx.conf /etc/nginx/conf.d/$domain.d/$app.conf
+sudo cp -a $backup_dir/php-fpm.conf /etc/php5/fpm/pool.d/$app.conf
+
+# Reload Nginx, PHP5-FPM and regenerate SSOwat conf
+sudo service php5-fpm restart
+sudo service nginx reload
+sudo yunohost app ssowatconf
