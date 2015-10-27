@@ -16,7 +16,7 @@ Installation
 
 From command line:
 
-`sudo yunohost app install -l kanboard https://github.com/mbugeia/codiad_ynh`
+`sudo yunohost app install -l codiad https://github.com/mbugeia/codiad_ynh`
 
 
 Upgrade
