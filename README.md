@@ -1,7 +1,7 @@
 Codiad for Yunohost
 =====================
 
-/!\ WARNING: DO NOT USE THIS, IT'S UNTESTED /!\
+/!\ You can use this package without risk but it will not be maintained /!\
 
 Codiad is a web-based IDE framework.
 Official website: <http://codiad.com>
