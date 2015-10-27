@@ -20,10 +20,10 @@ define("BASE_URL", "yuno_path");
 define("THEME", "default");
 
 // ABSOLUTE PATH, this is used as whitelist for absolute path projects 
-define("WHITEPATHS", BASE_PATH . ",/home");
+define("WHITEPATHS", BASE_PATH);
 
 // SESSIONS (e.g. 7200)
-$cookie_lifetime = "0";
+$cookie_lifetime = "120";
 
 // TIMEZONE
 date_default_timezone_set("America/Chicago");

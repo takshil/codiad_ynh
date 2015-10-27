@@ -4,7 +4,7 @@ if (!isset($_SESSION['user'])) {
 	$_SESSION['user'] = $_SERVER['PHP_AUTH_USER'];
 	$_SESSION['lang'] = 'en';
 	$_SESSION['theme'] = 'default';
-	$_SESSION['project'] = '/var/www';
+	$_SESSION['project'] = '/var/www/codiad';
 	$User = new User();
 	$User->username = $_SERVER['PHP_AUTH_USER'];
 	if ($User->CheckDuplicate()) {
