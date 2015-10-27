@@ -22,7 +22,7 @@ sudo cp -a ../sources/. $final_path
 # Copy and edit config.php
 sudo cp ../conf/config.php $final_path
 sudo cp ../conf/codiad_http_auth.php $final_path
-sudo sed -i "s/yuno_path/$domain$path/g" $final_path/config.php
+sudo sed -i "s@yuno_path@$domain$path@g" $final_path/config.php
 
 # Set permissions to codiad and data directory
 sudo chown -R root:root $final_path
