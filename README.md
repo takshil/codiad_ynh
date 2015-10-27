@@ -1,2 +1,30 @@
-# codiad_ynh
-Codiad for yunohost
+Codiad for Yunohost
+=====================
+
+/!\ WARNING: DO NOT USE THIS, IT'S UNTESTED /!\
+
+Codiad is a web-based IDE framework.
+Official website: <http://codiad.com>
+
+Requirements
+------------
+
+Functionnal instance of [Yunohost](https://yunohost.org/#/)
+
+Installation
+------------
+
+From command line:
+
+`sudo yunohost app install -l kanboard https://github.com/mbugeia/codiad_ynh`
+
+
+Upgrade
+-------
+From command line:
+
+`sudo yunohost app upgrade -u https://github.com/mbugeia/codiad_ynh codiad`
+
+Infos
+-----
+Codiad v2.6.6
