@@ -27,4 +27,4 @@ From command line:
 
 Infos
 -----
-Codiad v2.6.6
+Codiad v2.8.4
